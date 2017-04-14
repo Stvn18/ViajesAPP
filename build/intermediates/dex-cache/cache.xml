@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/99aecb4f0ffc57bbc02af335b37992fc3cd36513/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_0c725159cb0dbbb8885b64b1629d19799341f17f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/59011bea7f5130dc82f4283365d224b109635326/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_28122cb0a7898cb21c1be733ea3554477ba110ca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/fc60a5fcae6f660367714cfa2ce220abee5b128c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_143324539515230d2e4ae85e6c351a1d3a323ff9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.gradle/caches/modules-2/files-2.1/org.springframework.android/spring-android-core/1.0.1.RELEASE/e68f0e8e4b636ee30c4de58953be38d9b72a5e3b/spring-android-core-1.0.1.RELEASE.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e68f0e8e4b636ee30c4de58953be38d9b72a5e3b">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/spring-android-core-1.0.1.RELEASE_eb416a4f57d618ab1f588f557525298844133706.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/f194252463767b3cad5e4e164d216d8f36fee860/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_dd2267befe68927b310921d7d76530ae543ee4c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/d0a969995d8ee7cda61bb26eaac053c34cf04102/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_705db2faa23c82f7aaa9a39303543b086cb467b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/5aff4aa186d23e4e8e83493756733be7470de1d0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_d1c03ff79688058a3a10ad6b59bfd5abaeb2f7a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/df3d216c5b077b6ff6b7887430fcd85eabbd64b6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_aa1656ae7a9d0e06db615ea770e0de0496e69021.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.9.13/3c304d70f42f832e0a86d45bd437f692129299a4/jackson-core-asl-1.9.13.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3c304d70f42f832e0a86d45bd437f692129299a4">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/jackson-core-asl-1.9.13_79d4933f1d8dbef4cfe1e65652920c5eeabb5a55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/df3d216c5b077b6ff6b7887430fcd85eabbd64b6/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_ab6a4d1ead5b925c9d780010bdb2e9d92a9bbf6b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/99f6ade3fb94657e93df2b92185aeb84aeae1d56/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_46c31c29aec0ea1af1ef1733b475ca65998c9be8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_56fbbac88e83490dfa7f10b511fa200e83687778.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/8e3d7c04ff0743379345da37cafea8d3b369d97b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_808096f19d6d18ab0b489dfebe8e9d7c51c2ebf3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_b508de3a220bf2352f97d9f0f609c4515d695fdf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.9.13/1ee2f2bed0e5dd29d1cb155a166e6f8d50bbddb7/jackson-mapper-asl-1.9.13.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1ee2f2bed0e5dd29d1cb155a166e6f8d50bbddb7">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/jackson-mapper-asl-1.9.13_031705d8a3001cdbb239fd41a3bd2e6b5e2d1f5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/f194252463767b3cad5e4e164d216d8f36fee860/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_3c0ab63fb94e8a0e91f931592ab70be06edba013.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.gradle/caches/modules-2/files-2.1/org.springframework.android/spring-android-rest-template/1.0.1.RELEASE/e132d929bd181941f79b0d63edafb8a86ae6fd33/spring-android-rest-template-1.0.1.RELEASE.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e132d929bd181941f79b0d63edafb8a86ae6fd33">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/spring-android-rest-template-1.0.1.RELEASE_65cdc89b641853af8a76a5c758c9a832a7c08d99.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/8e3d7c04ff0743379345da37cafea8d3b369d97b/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_404c850a355e9dc5951b5d73b254112be6c2b425.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/f7c1203ece0eebcb7811585e0efbc80f9e49a3b8/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_00dbfa718ee63d99767e2f4db9cc25fc8d75c8e4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/f7c1203ece0eebcb7811585e0efbc80f9e49a3b8/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_fca50b6e8cc7930b3f984ae8dbe41daa3672f9f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/f9f9e358a98f52b2f66b4b11c98500c1bd14f9bb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_a68bc9a78f2c10a8ca697f08234514416f45867b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/59011bea7f5130dc82f4283365d224b109635326/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_7247fb7159fb7b8858ef57e1b545867bdd95c8d7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/wilver/.android/build-cache/1655918f0d3557ba511bcc68062b745bdaed53f6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/wilver/Documentos/umgProjects/ViajesApp/app/build/intermediates/pre-dexed/debug/classes_aed5b77f4b50826b7854d0cd38e1ed72d51cb5c0.jar" />
+    </item>
+
+</items>
