@@ -74,7 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
         User user = new User();
 
         user.setName(registerName.getText().toString());
-        user.setLastname(registerName.getText().toString());
+        user.setLastname(registerLastname.getText().toString());
         user.setEmail(registerEmail.getText().toString());
         user.setPassword(registerPassword.getText().toString());
 
