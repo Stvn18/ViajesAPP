@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         //Hace el set de la url del ws
-        Common.setUrlWs("http://192.168.8.101:8080/ViajesWS/api/");
+        Common.setUrlWs("http://192.168.1.12:8084/ViajesWS/api/");
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
