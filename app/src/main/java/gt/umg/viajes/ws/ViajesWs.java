@@ -77,6 +77,11 @@ public class ViajesWs {
             customResponseEntity.setResponseMessage(restClientException.getMessage());
 
             return customResponseEntity;
+        } catch (Exception exception){
+            customResponseEntity.setResponseCode(0);
+            customResponseEntity.setResponseMessage(exception.getMessage());
+
+            return customResponseEntity;
         }
     }
 
