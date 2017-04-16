@@ -18,11 +18,14 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
+import gt.umg.viajes.bd.ConfigurationDb;
 import gt.umg.viajes.common.Common;
 import gt.umg.viajes.common.Utils;
 import gt.umg.viajes.dto.CustomResponseEntityDto;
+import gt.umg.viajes.dto.SessionDto;
 import gt.umg.viajes.entities.UserSession;
 import gt.umg.viajes.ws.ViajesWs;
 
@@ -39,14 +42,12 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private ImageButton configurationButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        //Hace el set de la url del ws
-        Common.setUrlWs("http://192.168.1.12:8084/ViajesWS/api/");
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -79,8 +80,49 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        configurationButton = (ImageButton) findViewById(R.id.login_configuration_button);
+        configurationButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showConfiguration();
+            }
+        });
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+        checkActiveSession();
+    }
+
+    /**
+     * Verifica si ya hay una sesion iniciada muestra el menu principal
+     */
+    private void checkActiveSession(){
+        try{
+            ConfigurationDb configuration = new ConfigurationDb(LoginActivity.this);
+
+            Common.setUrlWs(configuration.getConfigurationByName("WS_URL"));
+
+            SessionDto session = configuration.getSession();
+
+            if(session != null){
+                Common.setSession(session);
+
+                Intent intent = new Intent(this, MenuActivity.class);
+                startActivity(intent);
+
+                this.finish();
+            }
+
+        }catch (Exception exception){
+            Utils.showCustomMessage(1, exception.getMessage(), this);
+        }
+    }
+
+    private void showConfiguration(){
+        Intent intent = new Intent(LoginActivity.this, ConfigurationActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 
     /**
@@ -212,24 +254,43 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(final CustomResponseEntityDto<UserSession> success) {
-            mAuthTask = null;
-            showProgress(false);
+            try{
+                mAuthTask = null;
+                showProgress(false);
 
-            if(success != null && success.getResponseCode() == 201){
-                //login ok
-                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                if(success != null && success.getResponseCode() == 201){
+                    //login ok
 
-                startActivity(intent);
-                LoginActivity.this.finish();
+                    //guarda la sesion en local
+                    ConfigurationDb configurationDb = new ConfigurationDb(LoginActivity.this);
 
-            } else if (success != null && success.getResponseCode() == 400){
-                //error de credenciales
-                mPasswordView.setError("Usuario o password son incorrectos");
-                mPasswordView.requestFocus();
-            } else {
-                Utils.showCustomMessage(1, success.getResponseMessage(), LoginActivity.this);
+                    SessionDto sessionDto = new SessionDto();
+
+                    sessionDto.setName(success.getResponseData().getUser().getName() + " " + success.getResponseData().getUser().getLastname());
+                    sessionDto.setEmail(success.getResponseData().getUser().getEmail());
+                    sessionDto.setToken(success.getResponseData().getToken());
+                    sessionDto.setHelpActive(true);
+
+                    configurationDb.saveSession(sessionDto.getName(), sessionDto.getEmail(), sessionDto.getToken());
+
+                    //guarda la sesion en memoria
+                    Common.setSession(sessionDto);
+
+                    Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+
+                    startActivity(intent);
+                    LoginActivity.this.finish();
+
+                } else if (success != null && success.getResponseCode() == 400){
+                    //error de credenciales
+                    mPasswordView.setError("Usuario o password son incorrectos");
+                    mPasswordView.requestFocus();
+                } else {
+                    Utils.showCustomMessage(1, success.getResponseMessage(), LoginActivity.this);
+                }
+            }catch (Exception exception){
+                Utils.showCustomMessage(1, exception.getMessage(), LoginActivity.this);
             }
-
         }
 
         @Override

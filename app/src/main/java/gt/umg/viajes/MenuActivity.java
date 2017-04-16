@@ -1,5 +1,6 @@
 package gt.umg.viajes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,14 +13,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import gt.umg.viajes.bd.ConfigurationDb;
+import gt.umg.viajes.common.Common;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private TextView username;
+    private TextView userEmail;
+
+    private ConfigurationDb configuration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        configuration = new ConfigurationDb(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -40,6 +54,14 @@ public class MenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        View navHeader = navigationView.inflateHeaderView(R.layout.nav_header_menu);
+
+        username = (TextView) navHeader.findViewById(R.id.nav_username);
+        userEmail = (TextView) navHeader.findViewById(R.id.nav_user_email);
+
+        username.setText(Common.getSession().getName());
+        userEmail.setText(Common.getSession().getEmail());
     }
 
     @Override
@@ -77,25 +99,28 @@ public class MenuActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        try {
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            // Handle navigation view item clicks here.
+            int id = item.getItemId();
 
-        } else if (id == R.id.nav_slideshow) {
+            if(id == R.id.nav_logout){
+                configuration.deleteSession(Common.getSession().getToken());
+                Common.setSession(null);
 
-        } else if (id == R.id.nav_manage) {
+                Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
 
-        } else if (id == R.id.nav_share) {
+                startActivity(intent);
 
-        } else if (id == R.id.nav_send) {
+                MenuActivity.this.finish();
+            }
+
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
+
+        } catch (Exception exception) {
 
         }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }

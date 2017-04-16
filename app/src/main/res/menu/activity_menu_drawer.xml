@@ -3,23 +3,36 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_vuelo"
+            android:icon="@drawable/ic_airplane"
+            android:title="Vuelo" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_barco"
+            android:icon="@drawable/ic_ship"
+            android:title="Barco" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_hotel"
+            android:icon="@drawable/ic_hotel"
+            android:title="Hotel" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
-    </group>
+            android:id="@+id/nav_carro"
+            android:icon="@drawable/ic_car"
+            android:title="Carro" />
+        <item
+            android:id="@+id/nav_vuelo_hotel"
+            android:icon="@drawable/ic_vuelo_hotel"
+            android:title="Vuelo+hotel" />
+        <item
+            android:id="@+id/nav_vuelo_hote_carro"
+            android:icon="@drawable/ic_vuelo_hotel_carro"
+            android:title="Vuelo+hotel+carro" />
 
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_exit"
+            android:title="Salir" />
+    </group>
+    <!--
     <item android:title="Communicate">
         <menu>
             <item
@@ -32,5 +45,6 @@
                 android:title="Send" />
         </menu>
     </item>
+    -->
 
 </menu>
