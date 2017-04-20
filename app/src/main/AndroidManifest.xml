@@ -29,7 +29,14 @@
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ConfigurationActivity"></activity>
+        <activity android:name=".ConfigurationActivity" />
+        <activity android:name=".VueloActivity" />
+        <activity android:name=".VueloDetalleActivity" />
+        <activity android:name=".RegistroPasajeroActivity" />
+        <activity
+            android:name=".ResumenVueloActivity"
+            android:label="Resumen" />
+        <activity android:name=".PagoVueloActivity"></activity>
     </application>
 
 </manifest>

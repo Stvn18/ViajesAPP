@@ -104,6 +104,12 @@ public class MenuActivity extends AppCompatActivity
             // Handle navigation view item clicks here.
             int id = item.getItemId();
 
+            if(id == R.id.nav_vuelo){
+                Intent intent = new Intent(MenuActivity.this, VueloActivity.class);
+                startActivity(intent);
+
+            }
+
             if(id == R.id.nav_logout){
                 configuration.deleteSession(Common.getSession().getToken());
                 Common.setSession(null);

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gt.umg.viajes.RegistroPasajeroActivity"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/registro_pasajero_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_names"
+            android:inputType="textPersonName"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/registro_pasajero_apellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_lastname"
+            android:inputType="textPersonName"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:id="@+id/registro_pasajero_pais"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:ms_multiline="false"
+        app:ms_hint="Pais"
+        app:ms_enableFloatingLabel="false"
+        app:ms_enableErrorLabel="false"
+        app:ms_floatingLabelText="Pais"
+        app:ms_typeface="typeface.ttf"
+        app:ms_thickness="2dp"
+        app:ms_arrowSize="16dp"
+        app:ms_alignLabels="false"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/registro_pasajero_telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Telefono"
+                    android:inputType="phone"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/registro_pasajero_genero"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:ms_multiline="false"
+                app:ms_hint="Genero"
+                app:ms_enableFloatingLabel="false"
+                app:ms_enableErrorLabel="false"
+                app:ms_floatingLabelText="Genero"
+                app:ms_typeface="typeface.ttf"
+                app:ms_thickness="2dp"
+                app:ms_arrowSize="16dp"
+                app:ms_alignLabels="false"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/registro_pasajero_fecha_nacimiento_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/calendar"
+                android:focusable="false"/>
+
+            <EditText
+                android:id="@+id/registro_pasajero_fecha_nacimiento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.73"
+                android:ems="10"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center_vertical|center_horizontal"
+                android:inputType="date"
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                android:hint="Fecha nacimiento">
+            </EditText>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/registro_pasajero_continuar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+</LinearLayout>
