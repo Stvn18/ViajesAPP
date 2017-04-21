@@ -5,27 +5,27 @@
         <item
             android:id="@+id/nav_vuelo"
             android:icon="@drawable/ic_airplane"
-            android:title="Vuelo" />
+            android:title="Vuelos" />
         <item
             android:id="@+id/nav_barco"
             android:icon="@drawable/ic_ship"
-            android:title="Barco" />
+            android:title="Cruceros" />
         <item
             android:id="@+id/nav_hotel"
             android:icon="@drawable/ic_hotel"
-            android:title="Hotel" />
+            android:title="Hoteles" />
         <item
             android:id="@+id/nav_carro"
             android:icon="@drawable/ic_car"
-            android:title="Carro" />
+            android:title="Carros" />
         <item
             android:id="@+id/nav_vuelo_hotel"
             android:icon="@drawable/ic_vuelo_hotel"
-            android:title="Vuelo+hotel" />
+            android:title="Reporte Vuelo+Hotel" />
         <item
             android:id="@+id/nav_vuelo_hote_carro"
             android:icon="@drawable/ic_vuelo_hotel_carro"
-            android:title="Vuelo+hotel+carro" />
+            android:title="Vuelos+Hoteles+Carros" />
 
         <item
             android:id="@+id/nav_logout"

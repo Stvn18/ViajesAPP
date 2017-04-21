@@ -110,6 +110,21 @@ public class MenuActivity extends AppCompatActivity
 
             }
 
+            if(id == R.id.nav_barco){
+                Intent intent = new Intent(MenuActivity.this, CruceroActivity.class);
+                startActivity(intent);
+            }
+
+            if(id == R.id.nav_hotel){
+                Intent intent = new Intent(MenuActivity.this, HotelActivity.class);
+                startActivity(intent);
+            }
+
+            if(id == R.id.nav_carro){
+                Intent intent = new Intent(MenuActivity.this, CarroActivity.class);
+                startActivity(intent);
+            }
+
             if(id == R.id.nav_logout){
                 configuration.deleteSession(Common.getSession().getToken());
                 Common.setSession(null);
