@@ -33,10 +33,13 @@
         <activity android:name=".VueloActivity" />
         <activity android:name=".VueloDetalleActivity" />
         <activity android:name=".RegistroPasajeroActivity" />
-        <activity
-            android:name=".ResumenVueloActivity"
-            android:label="Resumen" />
+        <activity android:name=".ResumenVueloActivity" />
         <activity android:name=".PagoVueloActivity"></activity>
+        <activity android:name=".CruceroActivity"></activity>
+        <activity android:name=".CruceroDetalleActivity"></activity>
+        <activity android:name=".CruceroInfoActivity"></activity>
+        <activity android:name=".CruceroResumenFacturacionActivity"></activity>
+        <activity android:name=".PagoCruceroActivity"></activity>
     </application>
 
 </manifest>

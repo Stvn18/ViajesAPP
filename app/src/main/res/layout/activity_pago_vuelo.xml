@@ -11,7 +11,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
-    <fr.ganfra.materialspinner.MaterialSpinner
+   <!-- <fr.ganfra.materialspinner.MaterialSpinner
         android:id="@+id/pago_vuelo_tarjeta_spinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,21 @@
         app:ms_thickness="2dp"
         app:ms_arrowSize="16dp"
         app:ms_alignLabels="false"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"/>-->
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/pago_vuelo_tarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tarjeta"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"

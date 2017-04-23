@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="gt.umg.viajes.CruceroDetalleActivity"
+    tools:context="gt.umg.viajes.CruceroInfoActivity"
     android:orientation="vertical"
     android:paddingBottom="16dp"
     android:paddingLeft="16dp"
@@ -176,32 +176,70 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:text="Madrid"
+                android:layout_gravity="center_vertical"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="6:00"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="20:00"
+                android:layout_gravity="center_vertical"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="5"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="30dp">
-
-                <Button
-                    android:id="@+id/crucero_info_continuar_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Seleccionar"
-                    android:layout_gravity="end"/>
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/crucero_info_regresar_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Regresar"
-                    android:layout_gravity="start"/>
+                    android:layout_gravity="start"
+                    android:layout_marginTop="30dp"/>
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/crucero_info_continuar_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continuar"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"/>
 
             </LinearLayout>
 
         </LinearLayout>
-
 
     </LinearLayout>
 

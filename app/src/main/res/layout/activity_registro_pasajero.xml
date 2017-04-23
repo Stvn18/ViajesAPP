@@ -39,7 +39,7 @@
 
     </android.support.design.widget.TextInputLayout>
 
-    <fr.ganfra.materialspinner.MaterialSpinner
+    <!--<fr.ganfra.materialspinner.MaterialSpinner
         android:id="@+id/registro_pasajero_pais"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -52,7 +52,21 @@
         app:ms_thickness="2dp"
         app:ms_arrowSize="16dp"
         app:ms_alignLabels="false"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"/>-->
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/registro_pasajero_pais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pais"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -85,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <fr.ganfra.materialspinner.MaterialSpinner
+            <!--<fr.ganfra.materialspinner.MaterialSpinner
                 android:id="@+id/registro_pasajero_genero"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -98,7 +112,21 @@
                 app:ms_thickness="2dp"
                 app:ms_arrowSize="16dp"
                 app:ms_alignLabels="false"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"/>-->
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/registro_pasajero_genero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Genero"
+                    android:inputType="text"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 

@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import gt.umg.viajes.bd.ConfigurationDb;
 import gt.umg.viajes.common.Common;
+import gt.umg.viajes.common.Utils;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -108,21 +109,28 @@ public class MenuActivity extends AppCompatActivity
                 Intent intent = new Intent(MenuActivity.this, VueloActivity.class);
                 startActivity(intent);
 
+                MenuActivity.this.finish();
             }
 
             if(id == R.id.nav_barco){
                 Intent intent = new Intent(MenuActivity.this, CruceroActivity.class);
                 startActivity(intent);
+
+                MenuActivity.this.finish();
             }
 
             if(id == R.id.nav_hotel){
                 Intent intent = new Intent(MenuActivity.this, HotelActivity.class);
                 startActivity(intent);
+
+                MenuActivity.this.finish();
             }
 
             if(id == R.id.nav_carro){
                 Intent intent = new Intent(MenuActivity.this, CarroActivity.class);
                 startActivity(intent);
+
+                MenuActivity.this.finish();
             }
 
             if(id == R.id.nav_logout){
@@ -140,7 +148,7 @@ public class MenuActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
 
         } catch (Exception exception) {
-
+            Utils.showCustomMessage(1, exception.getMessage(), MenuActivity.this);
         }
         return true;
     }

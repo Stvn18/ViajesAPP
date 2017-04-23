@@ -11,7 +11,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp">
 
-    <fr.ganfra.materialspinner.MaterialSpinner
+    <!--<fr.ganfra.materialspinner.MaterialSpinner
         android:id="@+id/crucero_origen_spinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,45 @@
         app:ms_thickness="2dp"
         app:ms_arrowSize="16dp"
         app:ms_alignLabels="false"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/crucero_origen_editext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lugar Origen"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/crucero_destino_editext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lugar Destino"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/crucero_buscar_button"

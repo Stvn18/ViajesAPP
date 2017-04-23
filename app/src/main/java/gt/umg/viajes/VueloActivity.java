@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import static gt.umg.viajes.R.id.vuelo_buscar_button;
+
 public class VueloActivity extends AppCompatActivity {
 
     static final int DATE_DIALOGINIC_ID = 0;
@@ -20,7 +22,7 @@ public class VueloActivity extends AppCompatActivity {
 
         setTitle("Seleccione su vuelo");
 
-        buscarButton = (Button) findViewById(R.id.vuelo_buscar_button);
+        buscarButton = (Button) findViewById(vuelo_buscar_button);
 
         buscarButton.setOnClickListener(new View.OnClickListener() {
             @Override
