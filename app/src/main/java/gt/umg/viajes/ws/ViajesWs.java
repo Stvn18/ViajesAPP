@@ -19,6 +19,7 @@ import java.util.Map;
 
 import gt.umg.viajes.common.Common;
 import gt.umg.viajes.dto.CustomResponseEntityDto;
+import gt.umg.viajes.entities.Location;
 import gt.umg.viajes.entities.User;
 import gt.umg.viajes.entities.UserSession;
 
@@ -120,4 +121,17 @@ public class ViajesWs {
         }
     }
 
+    public Location[] getLocationList() {
+        try{
+
+            Map<String, String> parameters = new HashMap<>();
+
+            ResponseEntity<Location[]> responseEntity = restTemplate.getForEntity(Common.getUrlWs() + "Location", Location[].class, parameters);
+
+            return responseEntity.getBody();
+
+        }catch (Exception exception){
+            return null;
+        }
+    }
 }

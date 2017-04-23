@@ -108,29 +108,21 @@ public class MenuActivity extends AppCompatActivity
             if(id == R.id.nav_vuelo){
                 Intent intent = new Intent(MenuActivity.this, VueloActivity.class);
                 startActivity(intent);
-
-                MenuActivity.this.finish();
             }
 
             if(id == R.id.nav_barco){
                 Intent intent = new Intent(MenuActivity.this, CruceroActivity.class);
                 startActivity(intent);
-
-                MenuActivity.this.finish();
             }
 
             if(id == R.id.nav_hotel){
                 Intent intent = new Intent(MenuActivity.this, HotelActivity.class);
                 startActivity(intent);
-
-                MenuActivity.this.finish();
             }
 
             if(id == R.id.nav_carro){
                 Intent intent = new Intent(MenuActivity.this, CarroActivity.class);
                 startActivity(intent);
-
-                MenuActivity.this.finish();
             }
 
             if(id == R.id.nav_logout){
