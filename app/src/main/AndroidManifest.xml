@@ -40,7 +40,8 @@
         <activity android:name=".CruceroInfoActivity" />
         <activity android:name=".CruceroResumenFacturacionActivity" />
         <activity android:name=".PagoCruceroActivity" />
-        <activity android:name=".HotelActivity"></activity>
+        <activity android:name=".HotelActivity" />
+        <activity android:name=".HotelSearchResultActivity"></activity>
     </application>
 
 </manifest>

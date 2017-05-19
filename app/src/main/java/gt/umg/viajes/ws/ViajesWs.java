@@ -19,6 +19,7 @@ import java.util.Map;
 
 import gt.umg.viajes.common.Common;
 import gt.umg.viajes.dto.CustomResponseEntityDto;
+import gt.umg.viajes.entities.HotelDetail;
 import gt.umg.viajes.entities.Location;
 import gt.umg.viajes.entities.User;
 import gt.umg.viajes.entities.UserSession;
@@ -121,17 +122,20 @@ public class ViajesWs {
         }
     }
 
-    public Location[] getLocationList() {
-        try{
-
-            Map<String, String> parameters = new HashMap<>();
-
-            ResponseEntity<Location[]> responseEntity = restTemplate.getForEntity(Common.getUrlWs() + "Location", Location[].class, parameters);
-
-            return responseEntity.getBody();
-
-        }catch (Exception exception){
-            return null;
-        }
+    public Resource<Location[]> getLocationArray(){
+        Map<String, String> parameters = new HashMap<>();
+        return new Resource<Location[]>().get(Common.getUrlWs() + "Location", parameters, Location[].class);
     }
+
+    public Resource<HotelDetail[]> getHotelServices(String locationId, String childrens, String adults, String bedrooms, Long lDateIn, Long lDateOut){
+        Map<String, String> parameters = new HashMap<>();
+        parameters.put("locationId", locationId);
+        parameters.put("childrens", childrens);
+        parameters.put("adults", adults);
+        parameters.put("bedrooms", bedrooms);
+        parameters.put("lDateIn", lDateIn.toString());
+        parameters.put("lDateOut", lDateOut.toString());
+        return new Resource<HotelDetail[]>().get(Common.getUrlWs() + "Hotel/findServices?locationId={locationId}&childrens={childrens}&adults={adults}&bedrooms={bedrooms}&lDateIn={lDateIn}&lDateOut={lDateOut}", parameters, HotelDetail[].class);
+    }
+
 }
