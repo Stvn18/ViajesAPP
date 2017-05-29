@@ -80,4 +80,17 @@ public class Utils {
         progressDialog.setMessage(message);
     }
 
+    public static String padLeft(String s, int n) {
+        StringBuilder sb = new StringBuilder();
+
+        for (int toPrepend = n - s.length(); toPrepend > 0; toPrepend--) {
+            sb.append('0');
+        }
+
+        sb.append(s);
+        String result = sb.toString();
+
+        return result;
+    }
+
 }

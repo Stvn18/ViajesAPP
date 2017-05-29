@@ -11,82 +11,28 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
-    <!--
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seleccione su vuelo"
-        android:textSize="25dp"
-        android:layout_gravity="center"/>
-        -->
+        android:text="Origen:"
+        android:textSize="14dp"/>
 
-    <!--<fr.ganfra.materialspinner.MaterialSpinner
-        android:id="@+id/vuelo_origen_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        app:ms_multiline="false"
-        app:ms_hint="Vuelo origen"
-        app:ms_enableFloatingLabel="false"
-        app:ms_enableErrorLabel="false"
-        app:ms_floatingLabelText="Vuelo origen"
-        app:ms_typeface="typeface.ttf"
-        app:ms_thickness="2dp"
-        app:ms_arrowSize="16dp"
-        app:ms_alignLabels="false"
-        android:layout_marginTop="20dp"/>
-
-    <fr.ganfra.materialspinner.MaterialSpinner
-        android:id="@+id/vuelo_destino_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        app:ms_multiline="false"
-        app:ms_hint="Vuelo origen"
-        app:ms_enableFloatingLabel="false"
-        app:ms_enableErrorLabel="false"
-        app:ms_floatingLabelText="Vuelo origen"
-        app:ms_typeface="typeface.ttf"
-        app:ms_thickness="2dp"
-        app:ms_arrowSize="16dp"
-        app:ms_alignLabels="false"
-        android:layout_marginTop="20dp"/>-->
-
-    <LinearLayout
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:id="@+id/vuelo_origen_spinner"></Spinner>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/vuelo_origen_editext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Vuelo Origen"
-                android:inputType="text"
-                android:maxLines="1" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/vuelo_destino_editext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Vuelo Destino"
-                android:inputType="text"
-                android:maxLines="1" />
-
-        </android.support.design.widget.TextInputLayout>
-
-    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destino:"
+        android:textSize="14dp"
+        android:layout_marginTop="15dp"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vuelo_destino_spinner"></Spinner>
 
 
     <LinearLayout
@@ -119,7 +65,6 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:inputType="date"
                 android:textColor="@android:color/black"
-                android:textSize="10sp"
                 android:hint="Salida">
             </EditText>
 
@@ -152,7 +97,6 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:inputType="date"
                 android:textColor="@android:color/black"
-                android:textSize="10sp"
                 android:hint="Regreso">
             </EditText>
 
@@ -177,7 +121,8 @@
                 android:layout_height="wrap_content"
                 android:hint="Adultos"
                 android:inputType="number"
-                android:maxLines="1" />
+                android:maxLines="1"
+                android:text="0"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -192,11 +137,34 @@
                 android:layout_height="wrap_content"
                 android:hint="Niños"
                 android:inputType="number"
-                android:maxLines="1" />
+                android:maxLines="1"
+                android:text="0"/>
 
         </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aereolinea preferida:"
+        android:textSize="14dp"
+        android:layout_marginTop="15dp"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vuelo_aereolinea_spinner"></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clase preferida:"
+        android:textSize="14dp"
+        android:layout_marginTop="15dp"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vuelo_clase_spinner"></Spinner>
 
     <Button
         android:id="@+id/vuelo_buscar_button"

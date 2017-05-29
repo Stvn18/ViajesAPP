@@ -19,6 +19,9 @@ import java.util.Map;
 
 import gt.umg.viajes.common.Common;
 import gt.umg.viajes.dto.CustomResponseEntityDto;
+import gt.umg.viajes.entities.Airline;
+import gt.umg.viajes.entities.Flight;
+import gt.umg.viajes.entities.FlightPreferredClass;
 import gt.umg.viajes.entities.HotelDetail;
 import gt.umg.viajes.entities.Location;
 import gt.umg.viajes.entities.User;
@@ -136,6 +139,33 @@ public class ViajesWs {
         parameters.put("lDateIn", lDateIn.toString());
         parameters.put("lDateOut", lDateOut.toString());
         return new Resource<HotelDetail[]>().get(Common.getUrlWs() + "Hotel/findServices?locationId={locationId}&childrens={childrens}&adults={adults}&bedrooms={bedrooms}&lDateIn={lDateIn}&lDateOut={lDateOut}", parameters, HotelDetail[].class);
+    }
+
+    public Resource<FlightPreferredClass[]> getPreferredClass(){
+        String url = Common.getUrlWs() + "FlightPreferredClass";
+        Map<String, String> parameters = new HashMap<>();
+        return new Resource<FlightPreferredClass[]>().get(url, parameters, FlightPreferredClass[].class);
+    }
+
+    public Resource<Airline[]> getAirlines(){
+        String url = Common.getUrlWs() + "Airline";
+        Map<String, String> parameters = new HashMap<>();
+        return new Resource<Airline[]>().get(url, parameters, Airline[].class);
+    }
+
+    public Resource<Flight[]> getVuelos(Integer flyingFromId, Integer flyingToId, Long lDepartingDate, Long lReturningDate, Byte adults, Byte childrens, Integer preferredClassId, Integer airlineId){
+        String url = Common.getUrlWs() + "Flight?flyingFromId={flyingFromId}&flyingToId={flyingToId}&lDepartingDate={lDepartingDate}&lReturningDate={lReturningDate}&adults={adults}&childrens={childrens}&preferredClassId={preferredClassId}&airlineId={airlineId}";
+        Map<String, String> parameters = new HashMap<>();
+        parameters.put("flyingFromId", flyingFromId.toString());
+        parameters.put("flyingToId", flyingToId.toString());
+        parameters.put("lDepartingDate", lDepartingDate.toString());
+        parameters.put("lReturningDate", lReturningDate.toString());
+        parameters.put("adults", adults.toString());
+        parameters.put("childrens", childrens.toString());
+        parameters.put("preferredClassId", preferredClassId.toString());
+        parameters.put("airlineId", airlineId.toString());
+
+        return new Resource<Flight[]>().get(url, parameters, Flight[].class);
     }
 
 }

@@ -26,4 +26,5 @@ public class Common {
     public static void setSession(SessionDto session) {
         Common.session = session;
     }
+
 }
