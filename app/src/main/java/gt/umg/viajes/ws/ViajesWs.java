@@ -23,6 +23,7 @@ import gt.umg.viajes.entities.Airline;
 import gt.umg.viajes.entities.Flight;
 import gt.umg.viajes.entities.FlightPreferredClass;
 import gt.umg.viajes.entities.HotelDetail;
+import gt.umg.viajes.entities.Invoice;
 import gt.umg.viajes.entities.Location;
 import gt.umg.viajes.entities.User;
 import gt.umg.viajes.entities.UserSession;
@@ -153,19 +154,21 @@ public class ViajesWs {
         return new Resource<Airline[]>().get(url, parameters, Airline[].class);
     }
 
-    public Resource<Flight[]> getVuelos(Integer flyingFromId, Integer flyingToId, Long lDepartingDate, Long lReturningDate, Byte adults, Byte childrens, Integer preferredClassId, Integer airlineId){
-        String url = Common.getUrlWs() + "Flight?flyingFromId={flyingFromId}&flyingToId={flyingToId}&lDepartingDate={lDepartingDate}&lReturningDate={lReturningDate}&adults={adults}&childrens={childrens}&preferredClassId={preferredClassId}&airlineId={airlineId}";
+    public Resource<Flight[]> getVuelos(Integer flyingFromId, Integer flyingToId, Integer preferredClassId, Integer airlineId){
+        String url = Common.getUrlWs() + "Flight?flyingFromId={flyingFromId}&flyingToId={flyingToId}&preferredClassId={preferredClassId}&airlineId={airlineId}";
         Map<String, String> parameters = new HashMap<>();
         parameters.put("flyingFromId", flyingFromId.toString());
         parameters.put("flyingToId", flyingToId.toString());
-        parameters.put("lDepartingDate", lDepartingDate.toString());
-        parameters.put("lReturningDate", lReturningDate.toString());
-        parameters.put("adults", adults.toString());
-        parameters.put("childrens", childrens.toString());
         parameters.put("preferredClassId", preferredClassId.toString());
         parameters.put("airlineId", airlineId.toString());
-
         return new Resource<Flight[]>().get(url, parameters, Flight[].class);
+    }
+
+    public Resource<Invoice> createInvoice(Invoice invoice){
+        String url = Common.getUrlWs() + "Invoice?token={token}";
+        Map<String, String> parameters = new HashMap<>();
+        parameters.put("token", Common.getSession().getToken());
+        return new Resource<Invoice>().post(url, parameters, Invoice.class, invoice);
     }
 
 }

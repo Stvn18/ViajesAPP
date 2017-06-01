@@ -1,7 +1,6 @@
 package gt.umg.viajes.entities;
 
-import java.math.BigDecimal;
-import java.util.Date;
+import java.sql.Time;
 
 /**
  * Created by wilver on 28/05/17.
@@ -11,29 +10,27 @@ public class Flight extends GenericEntity {
 
     private Location flyingFrom;
     private Location flyingTo;
-    private Date departingDate;
-    private Date returningDate;
-    private Byte adults;
-    private Byte childrens;
     private FlightPreferredClass preferredClass;
     private Airline airline;
     private String description;
-    private BigDecimal price;
+    private Float adultPrice;
+    private Float childPrice;
+    private Time departureTime;
+    private Time arrivalTime;
 
     public Flight() {
     }
 
-    public Flight(Location flyingFrom, Location flyingTo, Date departingDate, Date returningDate, Byte adults, Byte childrens, FlightPreferredClass preferredClass, Airline airline, String description, BigDecimal price) {
+    public Flight(Location flyingFrom, Location flyingTo, FlightPreferredClass preferredClass, Airline airline, String description, Float adultPrice, Float childPrice, Time departureTime, Time arrivalTime) {
         this.flyingFrom = flyingFrom;
         this.flyingTo = flyingTo;
-        this.departingDate = departingDate;
-        this.returningDate = returningDate;
-        this.adults = adults;
-        this.childrens = childrens;
         this.preferredClass = preferredClass;
         this.airline = airline;
         this.description = description;
-        this.price = price;
+        this.adultPrice = adultPrice;
+        this.childPrice = childPrice;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
     }
 
     public Location getFlyingFrom() {
@@ -50,38 +47,6 @@ public class Flight extends GenericEntity {
 
     public void setFlyingTo(Location flyingTo) {
         this.flyingTo = flyingTo;
-    }
-
-    public Date getDepartingDate() {
-        return departingDate;
-    }
-
-    public void setDepartingDate(Date departingDate) {
-        this.departingDate = departingDate;
-    }
-
-    public Date getReturningDate() {
-        return returningDate;
-    }
-
-    public void setReturningDate(Date returningDate) {
-        this.returningDate = returningDate;
-    }
-
-    public Byte getAdults() {
-        return adults;
-    }
-
-    public void setAdults(Byte adults) {
-        this.adults = adults;
-    }
-
-    public Byte getChildrens() {
-        return childrens;
-    }
-
-    public void setChildrens(Byte childrens) {
-        this.childrens = childrens;
     }
 
     public FlightPreferredClass getPreferredClass() {
@@ -108,12 +73,35 @@ public class Flight extends GenericEntity {
         this.description = description;
     }
 
-    public BigDecimal getPrice() {
-        return price;
+    public Float getAdultPrice() {
+        return adultPrice;
     }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
+    public void setAdultPrice(Float adultPrice) {
+        this.adultPrice = adultPrice;
     }
 
+    public Float getChildPrice() {
+        return childPrice;
+    }
+
+    public void setChildPrice(Float childPrice) {
+        this.childPrice = childPrice;
+    }
+
+    public Time getDepartureTime() {
+        return departureTime;
+    }
+
+    public void setDepartureTime(Time departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public Time getArrivalTime() {
+        return arrivalTime;
+    }
+
+    public void setArrivalTime(Time arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
 }

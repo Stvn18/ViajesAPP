@@ -20,7 +20,6 @@ import java.util.Date;
 import gt.umg.viajes.adapters.AirlineAdapter;
 import gt.umg.viajes.adapters.LocationAdapter;
 import gt.umg.viajes.adapters.PreferredClassAdapter;
-import gt.umg.viajes.common.Common;
 import gt.umg.viajes.common.Utils;
 import gt.umg.viajes.entities.Airline;
 import gt.umg.viajes.entities.FlightPreferredClass;
@@ -293,6 +292,7 @@ public class VueloActivity extends AppCompatActivity {
             intent.putExtra("airlineId", airline.getId());
 
             startActivity(intent);
+
 
         }catch (Exception exception){
             Log.e("buscarVuelos", exception.getMessage());
