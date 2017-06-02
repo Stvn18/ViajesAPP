@@ -42,7 +42,8 @@
         <activity android:name=".PagoCruceroActivity" />
         <activity android:name=".HotelActivity" />
         <activity android:name=".HotelSearchResultActivity" />
-        <activity android:name=".FacturasActivity"></activity>
+        <activity android:name=".FacturasActivity" />
+        <activity android:name=".DetalleFacturaActivity"></activity>
     </application>
 
 </manifest>
