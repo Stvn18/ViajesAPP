@@ -1,7 +1,10 @@
 package gt.umg.viajes;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import gt.umg.viajes.adapters.FacturasAdapter;
@@ -13,6 +16,7 @@ public class FacturasActivity extends AppCompatActivity {
 
     private ListView listView;
     private ViajesWs viajesWs;
+    private FacturasAdapter adapter = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +30,7 @@ public class FacturasActivity extends AppCompatActivity {
             @Override
             public void success(int statusCode, Invoice[] responseData) {
 
-                FacturasAdapter adapter = new FacturasAdapter(FacturasActivity.this, responseData);
+                adapter = new FacturasAdapter(FacturasActivity.this, responseData);
                 listView.setAdapter(adapter);
 
             }
@@ -37,7 +41,12 @@ public class FacturasActivity extends AppCompatActivity {
             }
         });
 
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(FacturasActivity.this, DetalleFacturaActivity.class);
+            }
+        });
 
     }
 }
