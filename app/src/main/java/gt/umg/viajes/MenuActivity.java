@@ -136,6 +136,11 @@ public class MenuActivity extends AppCompatActivity
                 MenuActivity.this.finish();
             }
 
+            if(id == R.id.nav_mis_facturas){
+                Intent intent = new Intent(MenuActivity.this, FacturasActivity.class);
+                startActivity(intent);
+            }
+
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
 

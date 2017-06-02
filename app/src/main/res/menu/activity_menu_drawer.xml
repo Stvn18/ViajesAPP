@@ -26,7 +26,10 @@
             android:id="@+id/nav_vuelo_hote_carro"
             android:icon="@drawable/ic_vuelo_hotel_carro"
             android:title="Vuelos+Hoteles+Carros" />
-
+        <item
+            android:id="@+id/nav_mis_facturas"
+            android:icon="@drawable/shoppin_cart"
+            android:title="Mis compras" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_exit"

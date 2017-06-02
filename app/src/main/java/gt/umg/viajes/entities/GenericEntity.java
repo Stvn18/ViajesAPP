@@ -1,5 +1,7 @@
 package gt.umg.viajes.entities;
 
+import java.util.Date;
+
 /**
  * Created by wilver on 28/05/17.
  */
@@ -7,6 +9,7 @@ package gt.umg.viajes.entities;
 public class GenericEntity {
     private Integer id;
     private boolean active;
+    private Date createdAt;
 
     public GenericEntity() {
     }
@@ -30,5 +33,13 @@ public class GenericEntity {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 }

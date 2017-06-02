@@ -171,4 +171,11 @@ public class ViajesWs {
         return new Resource<Invoice>().post(url, parameters, Invoice.class, invoice);
     }
 
+    public Resource<Invoice[]> findInvoiceByUser(){
+        String url = Common.getUrlWs() + "Invoice/findByUser?token={token}";
+        Map<String, String> parameters = new HashMap<>();
+        parameters.put("token", Common.getSession().getToken());
+        return new Resource<Invoice[]>().get(url, parameters, Invoice[].class);
+    }
+
 }
